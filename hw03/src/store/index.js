@@ -9,7 +9,8 @@ Vue.use(Vuex);
 //to handle state
 const state = {
     posts: [],
-    profiles: []
+    profiles: [],
+    login: null
 }
 
 //to handle state
@@ -29,6 +30,12 @@ const actions = {
                 commit('SET_PROFILES', response.data)
             })
     },
+    getLogin({ commit }) {
+        axios.get('https://private-anon-682fe31944-wad20postit.apiary-mock.com/users/1')
+            .then(response => {
+                commit('SET_LOGIN', response.data)
+            })
+    },
 
 }
 
@@ -39,6 +46,9 @@ const mutations = {
     },
     SET_PROFILES(state, profiles) {
         state.profiles = profiles
+    },
+    SET_LOGIN(state, login) {
+        state.login = login
     }
 }
 
