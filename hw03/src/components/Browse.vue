@@ -16,7 +16,6 @@
               <button v-bind:class="clicked ? 'blue' : 'white'" @click="clicked = !clicked" type="button" name="Follow" class="follow-button">Follow</button>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -27,16 +26,11 @@
 <script>
 import Header from "./Header";
 
-import router from "@/router";
-
 export default {
   data: function () {
     return {
       clicked: true
     }
-  },
-  components: {
-    'Header':Header,
   },
   computed: {
     profiles() {
@@ -47,14 +41,9 @@ export default {
     this.$store.dispatch("getProfiles");
   },
   name: "Browse",
-  methods: {
-    moveToLogin: function () {
-      router.push('/login')
-    },
-    moveToIndex: function() {
-      router.push('/')
-    }
-  },
+  components: {
+    'Header':Header,
+  }
 }
 </script>
 
@@ -66,6 +55,5 @@ export default {
 .white {
   background-color: #01579b;
 }
-
 
 </style>
