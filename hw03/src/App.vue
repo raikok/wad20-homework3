@@ -203,7 +203,7 @@ nav div.avatar-container {
   background-size: 15px;
   background-repeat: no-repeat;
   background-position: 5px center;
-  background-color: #8a8a8a;
+  /*background-color: #8a8a8a;*/
   width: 60px;
   height: 25px;
   padding-left: 23px;

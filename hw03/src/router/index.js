@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from "@/components/Index";
 import Browse from "@/components/Browse";
 import Login from "@/components/Login";
+import myStore from "@/components/Index";
 
 Vue.use(Router)
 
@@ -25,5 +26,12 @@ export default new Router({
             name: 'Login',
             component: Login
         },
+
+        {
+            path: '/myStore',
+            name: 'myStore',
+            component: myStore
+        },
+
     ]
 })
