@@ -54,10 +54,6 @@ export default {
       return this.$store.state.posts
     }
   },
-  data: {
-
-    clicked: false
-  }
   mounted() {
     this.$store.dispatch("getPosts");
   }
