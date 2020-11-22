@@ -67,10 +67,10 @@ export default {
 
 <style>
 
-.white {
+.blue {
   background-color: #8a8a8a;
 }
-.blue {
+.white {
   background-color: #01579b;
 }
 
