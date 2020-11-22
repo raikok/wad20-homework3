@@ -12,9 +12,9 @@
         <div class="drop-down-container" ref="container">
           <div class = "dropdown-item-data" id="name"></div>
           <div class = "dropdown-item-data" id="email"></div>
-          <div v-on:click="moveToIndex" class="dropdown-item">Home</div>
-          <div v-on:click="moveToBrowse" class="dropdown-item">Profiles</div>
-          <div v-on:click="moveToLogin" class="dropdown-item">Log out</div>
+          <div @click="moveToIndex" class="dropdown-item">Home</div>
+          <div @click="moveToBrowse" class="dropdown-item">Profiles</div>
+          <div @click="moveToLogin" class="dropdown-item">Log out</div>
         </div>
       </div>
     </nav>
