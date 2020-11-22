@@ -32,7 +32,7 @@
               {{post.text}}
             </div>
             <div class="post-actions">
-              <button v-bind:class="{'liked': !clicked, 'liked': clicked}" @click="clicked = !clicked" type="button" name="like" class="like-button">{{post.likes}}</button>
+              <button v-bind:class="clicked ? 'blue' : 'white'" @click="clicked = !clicked" type="button" name="like" >{{post.likes}}</button>
             </div>
 
           </div>
@@ -45,6 +45,11 @@
 <script>
 import Header from "./Header";
 export default {
+  data: function () {
+    return {
+      clicked: true
+    }
+  },
   name: 'Index',
   components: {
     'Header':Header,
@@ -54,13 +59,20 @@ export default {
       return this.$store.state.posts
     }
   },
-  data: {
-
-    clicked: false
-  }
   mounted() {
     this.$store.dispatch("getPosts");
   }
 }
 </script>
 
+<style>
+
+.white {
+  background-color: #8a8a8a;
+}
+.blue {
+  background-color: #01579b;
+}
+
+
+</style>
