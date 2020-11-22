@@ -265,4 +265,8 @@ nav div.avatar-container {
   color: #82008f;
 }
 
+.inter {
+  margin: 4rem;
+}
+
 </style>
