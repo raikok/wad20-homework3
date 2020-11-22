@@ -10,13 +10,13 @@
         </h4>
       </div>
       <div>
-        <h4>Or</h4>
+        <h4>{{user.email | capitalize}}</h4>
       </div>
       <div>
         <h3>Please Log In</h3>
         <form action="index.html" method="post">
           <div>
-            <input v-model="capitalize" type="text" name="email" placeholder="Email">
+            <input type="text" v-model="user.email" name="email" placeholder="Email">
           </div>
           <div>
             <input type="password" name="password" placeholder="Password">
@@ -41,10 +41,20 @@ import capitalize from "../filter.js"
 
 export default {
   name: "Login",
+  data: function () {
+    return {
+      user: {
+        email: null
+      }
+    }
+  },
   methods: {
     moveToIndex: function () {
       router.push('/')
     }
+  },
+  filters: {
+    capitalize: capitalize
   }
 }
 </script>
